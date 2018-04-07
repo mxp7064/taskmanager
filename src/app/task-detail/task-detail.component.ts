@@ -78,7 +78,7 @@ export class TaskDetailComponent implements OnInit {
 
     delete(): void {
         let dialogRef = this.dialog.open(DialogComponent, {
-           // width: '250px',
+            width: '250px',
             data: { message: "Delete task \"" + this.task.name + "\" ?" }
         });
 
