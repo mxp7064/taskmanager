@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    background-image: url("cork-wallet.png");
+    font-family: 'Kanit', sans-serif;
+    font-size: 130%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#content{
+    margin: 0 auto; 
+    width: 100%;
+    max-width: 1000px;
+}

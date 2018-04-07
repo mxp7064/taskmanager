@@ -1,0 +1,42 @@
+.task{
+    cursor: pointer;
+    background: white;
+    position: relative;
+}
+
+
+
+.taskData{
+    float: left;
+    width: 100%;
+}
+
+.xbutton{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 27px !important;
+}
+
+.taskName{
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(0, 150, 136);
+}
+
+.taskDate{
+    color: rgb(255, 64, 129);
+}
+.checkbox{
+    position: absolute;
+    right: 50px;
+    bottom: 29px;
+}
+
+.overline{
+    text-decoration-line: line-through;
+    
+  text-decoration-style: solid;
+  text-decoration-color: rgb(255, 64, 129);
+}
+

@@ -1,0 +1,26 @@
+<div class="w3-container">
+    <h2 class="w3-center" style="color: rgb(255,64,129)">Task List</h2>
+
+    <ul class="w3-ul w3-hoverable">
+        <li *ngFor="let task of tasks" class="task w3-hover-lightgray w3-hover-text-white w3-card w3-section clearfix">
+            <span class="taskData" routerLink="/task/{{task._id}}">
+                <h5 class="taskName" [class.overline]="task.checked">{{task.name}}</h5>
+                <p>{{task.description}}</p>
+                <p class="taskDate">{{task.date | date:'HH:mm a MM-dd-yyyy' }}</p>
+
+            </span>
+            <span (click)="deleteTask(task)" class="w3-bar-item w3-button w3-xlarge xbutton">
+                <i class="fas fa-times"></i>
+            </span>
+            <mat-checkbox class="checkbox" [(ngModel)]="task.checked" (change)="updateTask(task)" labelPosition="before">{{ task.checked == true ? 'Uncheck' : 'Check' }}</mat-checkbox>
+        </li>
+    </ul>
+
+    <div *ngIf='tasksLength == 0' class="w3-center w3-padding w3-large w3-margin-bottom">No tasks, click Add Task</div>
+
+    <div class="w3-center">
+        <button class="w3-button w3-teal w3-margin-bottom" (click)="addTaskFlag()">Add Task</button>
+    </div>
+
+    <app-task-add *ngIf="flag" (onUndo)="undoRefresh()" (onAddCancel)="hideTaskAdd()"></app-task-add>
+</div>

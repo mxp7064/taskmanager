@@ -1,0 +1,28 @@
+<div class="w3-center" style="position: relative">
+    <button class="w3-button w3-teal " style="position: absolute; left: 0; top: 14px;" (click)="goBack()">Go Back</button>
+    <h2 style="padding-top: 10px; color: rgb(255,64,129)">Edit Task</h2>
+</div>
+
+<div class="w3-container w3-card-4 w3-white">
+    <p>
+        <input class="w3-input" type="text" name="taskname" style="width:90%" [(ngModel)]="task.name">
+        <label>Task Name</label>
+    </p>
+    <p>
+        <input class="w3-input" type="text" name="taskdescriptoin" style="width:90%" [(ngModel)]="task.description">
+        <label>Task Description</label>
+    </p>
+    <p>
+        <angular2-date-picker (onDateSelect)="onDateSelect($event)" [(ngModel)]="task.date" [settings]="settings"></angular2-date-picker>
+        <label>Task Date and Time</label>
+    </p>
+
+    <p>
+        <mat-checkbox class="example-margin" [(ngModel)]="task.checked">{{ task.checked == true ? 'Uncheck' : 'Check' }}</mat-checkbox>
+    </p>
+
+    <p class="w3-center">
+        <button class="w3-button w3-teal" (click)="save()">Update Task</button>
+        <button class="w3-button w3-teal" (click)="delete()">Delete Task</button>
+    </p>
+</div>

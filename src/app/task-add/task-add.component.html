@@ -1,0 +1,20 @@
+<div class="w3-container w3-card-4 w3-white " style="margin-bottom: 50px;">
+    <p>
+        <input class="w3-input" type="text" name="taskname" style="width:90%" [(ngModel)]="task.name">
+        <label>Task Name</label>
+    </p>
+
+    <p>
+        <input class="w3-input" type="text" name="taskdescriptoin" style="width:90%" [(ngModel)]="task.description">
+        <label>Task Description</label>
+    </p>
+    <p>
+        <angular2-date-picker name="datetimepicker" [(ngModel)]="task.date" [settings]="settings"></angular2-date-picker>
+        <label>Set Task Date and Time</label>
+    </p>
+
+    <p class="w3-center">
+        <button class="w3-button w3-teal" (click)="cancel()">Cancel</button>
+        <button class="w3-button w3-teal" (click)="addTask()">Add Task</button>
+    </p>
+</div>
