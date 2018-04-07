@@ -16,8 +16,8 @@ const httpOptions = {
 
 @Injectable()
 export class TaskService {
-  private tasksUrl = 'http://localhost:8000/tasks';
-  private singleTaskUrl = "http://localhost:8000/task";
+  private tasksUrl = 'https://taskmanager697.herokuapp.com/tasks';
+  private singleTaskUrl = "https://taskmanager697.herokuapp.com/task";
 
   constructor(private http: HttpClient) { }
 

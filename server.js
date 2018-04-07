@@ -3,7 +3,7 @@ const MongoClient    = require('mongodb').MongoClient;
 const bodyParser     = require('body-parser');
 const db             = require('./config/db');
 const app            = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.use(express.static(__dirname + '/dist'));
 // Start the app by listening on the default
