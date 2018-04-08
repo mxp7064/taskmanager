@@ -49,9 +49,7 @@ export class TaskDetailComponent implements OnInit {
 
         snackBarRef.onAction().subscribe(() => {
             this.taskService.deleteTask(task._id).subscribe(() => {
-
             });
-
         });
     }
 

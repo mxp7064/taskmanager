@@ -39,7 +39,6 @@ export class TasksComponent implements OnInit {
             this.tasks = tasks;
             this.tasksLength = this.tasks.length;
         });
-
     }
 
     addTaskFlag() {
