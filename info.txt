@@ -1,0 +1,18 @@
+
+*****************
+mLab setup:
+generalUser
+managerpass
+mongodb://generalUser:managerpass@ds237489.mlab.com:37489/taskmanager
+
+****************
+
+sto si koristi u live examplu:
+data binding(if, event, for loop)
+events
+components, services
+observable, http
+router
+material components: snackbar, dialog, checkbox https://material.angular.io/components/checkbox/overview
+angular2 date picker https://www.npmjs.com/package/angular2-datetimepicker
+
